@@ -43,4 +43,4 @@ class operation {
  * example object
  */
 $example = new operation();
-$example->addition(10)->subtraction(5)->division(3)->multiplication(2)->result(); ?>
+$example->addition(10)->subtraction(5)->division(3)->multiplication(2)->result();
