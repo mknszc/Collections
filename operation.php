@@ -37,10 +37,16 @@ class operation {
     function result() {
         echo $this->result;
     }
+
+    function reset() {
+        $this->result = 0;
+        return $this;
+    }
 }
 
 /*
  * example object
  */
 $example = new operation();
-$example->addition(10)->subtraction(5)->division(3)->multiplication(2)->result();
+$example->addition(10)->subtraction(5)->division(3)->multiplication(2)->reset()->result();
+
