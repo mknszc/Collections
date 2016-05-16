@@ -18,6 +18,7 @@ class member {
     }
 
 }
+
 class signUp extends member {
 
     function save () {
