@@ -10,6 +10,7 @@ class person {
     private $message;
     public $name;
     public $sex;
+
     function setName($newName) {
         $this->name = $newName;
     }
