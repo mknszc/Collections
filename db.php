@@ -32,7 +32,6 @@ class db {
         }
         catch(PDOException $e){
             $this->error = $e->getMessage();
-            echo $this->error;
             die();
         }
     }
@@ -52,16 +51,22 @@ class db {
      * @return array
      */
     function getData($query) {
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute();
-        $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        return $stmt;
+        try {
+            $stmt = $this->conn->prepare($query);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            return $stmt;
+        }
+        catch(PDOException $e){
+            $this->error = $e->getMessage();
+            die();
+        }
     }
 }
 
 $instance = db::getInstance();
 $conn = $instance->getConnection();
-$conn = $instance->getData('(Select * From user)');
+$conn = $instance->getData('INSERT INTO user (name,surname) VALUES ("name","surnme")');
 echo "<table border='1px'><tr>";
 foreach ($conn as $r) {
     echo '<td>'.$r['id'].'</td>';
