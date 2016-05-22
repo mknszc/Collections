@@ -42,14 +42,11 @@ class db {
             self::$instance = new db();
         }
         return self::$instance;
-
     }
 
     public function getConnection() {
         return $this->conn;
-
     }
-
     /**
      * @param $query
      * @return array
