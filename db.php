@@ -62,6 +62,7 @@ class db {
             die();
         }
     }
+
     public function closeConnection() {
         $this->conn = null;
     }
