@@ -30,14 +30,14 @@ class db {
             dbname={$this->name}", $this->user, $this->pass,
                 array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
         }
-        catch(PDOException $e){
+        catch(PDOException $e) {
             $this->error = $e->getMessage();
             die();
         }
     }
 
     public static function getInstance() {
-        if(!self::$instance) {
+        if (!self::$instance) {
             self::$instance = new db();
         }
         return self::$instance;
@@ -57,7 +57,7 @@ class db {
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
             return $stmt;
         }
-        catch(PDOException $e){
+        catch(PDOException $e) {
             $this->error = $e->getMessage();
             die();
         }
