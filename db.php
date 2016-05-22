@@ -62,11 +62,14 @@ class db {
             die();
         }
     }
+    public function closeConnection() {
+        $this->conn = null;
+    }
 }
 
 $instance = db::getInstance();
 $conn = $instance->getConnection();
-$conn = $instance->getData('INSERT INTO user (name,surname) VALUES ("name","surnme")');
+$conn = $instance->getData('');
 echo "<table border='1px'><tr>";
 foreach ($conn as $r) {
     echo '<td>'.$r['id'].'</td>';
