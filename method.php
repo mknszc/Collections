@@ -7,11 +7,11 @@
  */
 class method {
 
-    function __destruct() {
+    public function __destruct() {
         echo "class destruct";
     }
 
-    function __construct() {
+    public function __construct() {
         echo "class construct \n";
     }
 }

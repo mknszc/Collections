@@ -9,24 +9,23 @@
 class member {
     public $name;
 
-    function getMember() {
+    public function getMember() {
         $this->name = 'Özcan ÇAMOĞLU';
     }
 
-    function memberName() {
+    public function memberName() {
         self::getMember();
     }
-
 }
 
 class signUp extends member {
 
-    function save () {
+    public function save () {
         parent::memberName();
         echo "The name of the member registration made:\n".$this->name;
     }
 
-    function complete(){
+    public function complete(){
         self::save();
     }
 }

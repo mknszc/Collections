@@ -12,14 +12,14 @@ class veriables {
     protected $old = '23 ';
     public $job;
 
-    function getName() {
+    public function getName() {
         return 'Name is:'.$this->name;
     }
 }
 
 class child extends veriables {
 
-    function getOld() {
+    public function getOld() {
         return 'Old is:'.$this->old;
     }
 }

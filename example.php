@@ -8,20 +8,21 @@
  */
 interface example {
 
-    function set($veriable);
-    function get();
+    public function set($veriable);
+    public function get();
 }
 
 class name implements example {
     public $name;
-    function set($veriable) {
+
+    public function set($veriable) {
         $this->name = $veriable;
     }
 
     /**
      * @return mixed
      */
-    function get() {
+    public function get() {
         return $this->name;
     }
 }

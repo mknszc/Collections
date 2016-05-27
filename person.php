@@ -11,23 +11,23 @@ class person {
     public $name;
     public $sex;
 
-    function setName($newName) {
+    public function setName($newName) {
         $this->name = $newName;
     }
 
-    function getName() {
+    public function getName() {
         return $this->name;
     }
 
-    function setSex($newSex) {
+    public function setSex($newSex) {
         $this->sex = $newSex;
     }
 
-    function getSex() {
+    public function getSex() {
         return $this->sex;
     }
 
-    function hello() {
+    public function hello() {
         if ($this->sex == 'male') {
             $this->message = 'Mr.'.$this->name;
         }

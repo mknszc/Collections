@@ -14,31 +14,31 @@ class operation {
      *
      */
 
-    function addition($number) {
+    public function addition($number) {
         $this->result = $this->result + $number;
         return $this;
     }
 
-    function subtraction($number) {
+    public function subtraction($number) {
         $this->result = $this->result - $number;
         return $this;
     }
 
-    function division($number) {
+    public function division($number) {
         $this->result = $this->result / $number;
         return $this;
     }
 
-    function multiplication($number) {
+    public function multiplication($number) {
         $this->result = $this->result * $number;
         return $this;
     }
 
-    function result() {
+    public function result() {
         echo $this->result;
     }
 
-    function reset() {
+    public function reset() {
         $this->result = 0;
         return $this;
     }
