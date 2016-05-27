@@ -7,17 +7,17 @@
  * Time: 23:24
  */
 interface adapter {
- function set($name);
+    public function set($name);
 }
 
 interface adapter2 extends adapter {
-    function get();
+    public function get();
 }
 
 class example implements adapter {
-
     private $name;
-    function set($name) {
+
+    public function set($name) {
         // TODO: Implement set() method.
         $this->name = $name;
     }
@@ -25,12 +25,13 @@ class example implements adapter {
 
 class example2 implements adapter2 {
     private $name;
-    function set($name) {
+
+    public function set($name) {
         // TODO: Implement set() method.
         $this->name = $name;
     }
 
-    function get(){
+    public function get() {
         // TODO: Implement get() method.
         return $this->name;
     }
