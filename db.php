@@ -50,7 +50,7 @@ class db {
      * @param $query
      * @return array
      */
-    function getData($query) {
+    public function getData($query) {
         try {
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
