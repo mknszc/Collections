@@ -42,6 +42,17 @@ function methodCheck($class, $name) {
 
     }
 }
+/**
+ * __autoload("person");
+ *
+ * --------or----------
+ * $exp = new person();
+ *
+ * classCheck("person");
+ *
+ * methodCheck("person", "setName");
+ *
+ */
 
 
 
