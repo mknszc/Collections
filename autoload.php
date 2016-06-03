@@ -42,6 +42,19 @@ function methodCheck($class, $name) {
 
     }
 }
+
+function fileCheck($file) {
+
+    if(file_exists($file)) {
+        $status = "File is here";
+    }
+    else {
+        $status = "File is not found";
+    }
+    return $status;
+}
+
+
 /**
  * __autoload("person");
  *
@@ -52,6 +65,7 @@ function methodCheck($class, $name) {
  *
  * methodCheck("person", "setName");
  *
+ * fileCheck("db.php");
  */
 
 
