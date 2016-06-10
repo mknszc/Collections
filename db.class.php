@@ -33,7 +33,7 @@
             return pg_fetch_all($result);
         }
 		
-		function getRowAsAssoc($query) {
+	function getRowAsAssoc($query) {
             $result = pg_query($this->connection, $query);
             return pg_fetch_assoc($result);
         }
@@ -50,9 +50,9 @@
             echo pg_result_error($result);
         }
 		
-		public static function getInstance($connectionString) {
-			if (!self::$instance) {
-				self::$instance = new db($connectionString);
+	public static function getInstance($connectionString) {
+		if (!self::$instance) {
+			self::$instance = new db($connectionString);
 		    }
 			return self::$instance;
 		}
