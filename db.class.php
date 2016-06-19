@@ -57,3 +57,4 @@
 			return self::$instance;
 		}
     }
+
