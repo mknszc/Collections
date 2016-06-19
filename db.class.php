@@ -29,7 +29,7 @@
         }
 		
         function getAll($query) {
-        	 $result = pg_query($this->connection, $query);
+        	$result = pg_query($this->connection, $query);
 			return pg_fetch_all($result);
         }
 		
