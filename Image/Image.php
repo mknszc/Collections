@@ -73,7 +73,7 @@ class Image {
         return $this->imgStatus;
     }
 
-    public function noİmg() {
+    public function noImg() {
         if (self::imgStatus() == False) {
             $this->noImage = True ;
         }
